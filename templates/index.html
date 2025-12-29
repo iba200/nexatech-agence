@@ -1,0 +1,293 @@
+{% extends "base.html" %}
+
+{% block title %}Nexatech Sénégal - Solutions Tech Innovantes{% endblock %}
+
+{% block content %}
+<!-- Hero Section -->
+<section class="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden bg-gray-50">
+    <div class="absolute inset-0 z-0 opacity-10">
+        <div class="absolute inset-0 bg-gradient-to-br from-blue-dark to-blue-medium"></div>
+        <svg class="absolute right-0 top-0 h-full w-1/2 text-orange-primary transform translate-x-1/2"
+            xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="currentColor">
+            <circle cx="50" cy="50" r="50" />
+        </svg>
+    </div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div data-aos="fade-right">
+                <h1 class="text-4xl lg:text-5xl font-display font-bold text-blue-dark mb-6 leading-tight">
+                    Transformez Votre Business avec des <span class="text-orange-primary">Solutions Innovantes</span>
+                </h1>
+                <p class="text-lg text-gray-600 mb-8 leading-relaxed">
+                    Nexatech accompagne les entreprises sénégalaises dans leur transformation digitale. Sites web,
+                    applications mobiles et logiciels de gestion sur mesure pour propulser votre croissance.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4">
+                    <a href="/contact"
+                        class="inline-flex justify-center items-center bg-orange-primary hover:bg-orange-dark text-white px-8 py-3.5 rounded-lg font-medium transition-colors shadow-lg shadow-orange-primary/30 text-lg">
+                        Demander un Devis Gratuit
+                    </a>
+                    <a href="/services"
+                        class="inline-flex justify-center items-center bg-white border-2 border-orange-primary text-orange-primary hover:bg-orange-primary hover:text-white px-8 py-3.5 rounded-lg font-medium transition-colors text-lg">
+                        Découvrir Nos Services
+                    </a>
+                </div>
+            </div>
+            <div class="relative" data-aos="fade-left">
+                <!-- Placeholder for Hero Image - Ideally replace with actual image asset -->
+                <div class="aspect-w-4 aspect-h-3 rounded-2xl overflow-hidden shadow-2xl bg-white p-2">
+                    <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                        alt="Équipe Nexatech" class="rounded-xl w-full h-full object-cover">
+                </div>
+                <!-- Floating Badge -->
+                <div
+                    class="absolute -bottom-6 -left-6 bg-white p-4 rounded-xl shadow-xl flex items-center gap-3 animate-bounce-slow">
+                    <div class="bg-green-100 p-2 rounded-full text-green-600">
+                        <i class="fas fa-check-circle text-xl"></i>
+                    </div>
+                    <div>
+                        <p class="font-bold text-gray-900">100% Satisfait</p>
+                        <p class="text-xs text-gray-500">Qualité Garantie</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Why Nexatech Section -->
+<section class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-3xl mx-auto mb-16" data-aos="fade-up">
+            <h2 class="text-3xl lg:text-4xl font-display font-bold text-blue-dark mb-4">Votre Partenaire Tech de
+                Confiance au Sénégal</h2>
+            <p class="text-gray-600">Nous combinons expertise technique et compréhension du marché local pour vous
+                offrir des solutions adaptées.</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <!-- Feature 1 -->
+            <div class="bg-gray-50 rounded-xl p-8 transition-transform hover:-translate-y-2 hover:shadow-lg"
+                data-aos="fade-up" data-aos-delay="0">
+                <div class="w-14 h-14 bg-orange-100 rounded-lg flex items-center justify-center mb-6">
+                    <span class="text-3xl">🇸🇳</span>
+                </div>
+                <h3 class="text-xl font-bold text-blue-dark mb-3">100% Sénégalais</h3>
+                <p class="text-gray-600">Une équipe locale qui comprend vos défis et le marché sénégalais.</p>
+            </div>
+            <!-- Feature 2 -->
+            <div class="bg-gray-50 rounded-xl p-8 transition-transform hover:-translate-y-2 hover:shadow-lg"
+                data-aos="fade-up" data-aos-delay="100">
+                <div class="w-14 h-14 bg-green-100 rounded-lg flex items-center justify-center mb-6">
+                    <span class="text-3xl">💰</span>
+                </div>
+                <h3 class="text-xl font-bold text-blue-dark mb-3">Tarifs Adaptés</h3>
+                <p class="text-gray-600">Des prix compétitifs et des facilités de paiement pour les PME.</p>
+            </div>
+            <!-- Feature 3 -->
+            <div class="bg-gray-50 rounded-xl p-8 transition-transform hover:-translate-y-2 hover:shadow-lg"
+                data-aos="fade-up" data-aos-delay="200">
+                <div class="w-14 h-14 bg-blue-100 rounded-lg flex items-center justify-center mb-6">
+                    <span class="text-3xl">⚡</span>
+                </div>
+                <h3 class="text-xl font-bold text-blue-dark mb-3">Réactivité</h3>
+                <p class="text-gray-600">Support disponible 6j/7 et respect strict des délais de livraison.</p>
+            </div>
+            <!-- Feature 4 -->
+            <div class="bg-gray-50 rounded-xl p-8 transition-transform hover:-translate-y-2 hover:shadow-lg"
+                data-aos="fade-up" data-aos-delay="300">
+                <div class="w-14 h-14 bg-purple-100 rounded-lg flex items-center justify-center mb-6">
+                    <span class="text-3xl">🎯</span>
+                </div>
+                <h3 class="text-xl font-bold text-blue-dark mb-3">Résultats</h3>
+                <p class="text-gray-600">Des solutions orientées ROI pour augmenter votre chiffre d'affaires.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Services Preview -->
+<section class="py-20 bg-gray-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex flex-col md:flex-row justify-between items-end mb-12 gap-6">
+            <div class="max-w-2xl" data-aos="fade-right">
+                <h2 class="text-3xl lg:text-4xl font-display font-bold text-blue-dark mb-4">Des Solutions Complètes pour
+                    Votre Croissance</h2>
+                <p class="text-gray-600">De la conception à la maintenance, nous gérons tous vos besoins digitaux.</p>
+            </div>
+            <a href="/services"
+                class="text-orange-primary font-bold hover:text-orange-dark flex items-center gap-2 group"
+                data-aos="fade-left">
+                Voir tous nos services
+                <i class="fas fa-arrow-right transition-transform group-hover:translate-x-1"></i>
+            </a>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <!-- Service 1 -->
+            <div class="bg-white rounded-xl p-8 shadow-sm hover:shadow-md transition-shadow group" data-aos="fade-up"
+                data-aos-delay="0">
+                <div
+                    class="w-12 h-12 bg-blue-50 text-blue-600 rounded-lg flex items-center justify-center mb-6 group-hover:bg-blue-600 group-hover:text-white transition-colors">
+                    <i class="fas fa-laptop-code text-xl"></i>
+                </div>
+                <h3 class="text-xl font-bold text-blue-dark mb-3">Développement Web & Mobile</h3>
+                <p class="text-gray-600 mb-6">Sites vitrines, e-commerce et applications mobiles performants et
+                    modernes.</p>
+                <a href="/services#web" class="text-blue-600 font-medium hover:text-blue-800">En savoir plus →</a>
+            </div>
+            <!-- Service 2 -->
+            <div class="bg-white rounded-xl p-8 shadow-sm hover:shadow-md transition-shadow group relative overflow-hidden"
+                data-aos="fade-up" data-aos-delay="100">
+                <div class="absolute top-4 right-4 bg-orange-100 text-orange-600 text-xs font-bold px-2 py-1 rounded">
+                    PRODUIT PHARE</div>
+                <div
+                    class="w-12 h-12 bg-orange-50 text-orange-primary rounded-lg flex items-center justify-center mb-6 group-hover:bg-orange-primary group-hover:text-white transition-colors">
+                    <i class="fas fa-home text-xl"></i>
+                </div>
+                <h3 class="text-xl font-bold text-blue-dark mb-3">Logiciel ImmoGest</h3>
+                <p class="text-gray-600 mb-6">La solution tout-en-un pour la gestion locative immobilière au Sénégal.
+                </p>
+                <a href="/immogest" class="text-orange-primary font-medium hover:text-orange-dark">Découvrir ImmoGest
+                    →</a>
+            </div>
+            <!-- Service 3 -->
+            <div class="bg-white rounded-xl p-8 shadow-sm hover:shadow-md transition-shadow group" data-aos="fade-up"
+                data-aos-delay="200">
+                <div
+                    class="w-12 h-12 bg-purple-50 text-purple-600 rounded-lg flex items-center justify-center mb-6 group-hover:bg-purple-600 group-hover:text-white transition-colors">
+                    <i class="fas fa-bullhorn text-xl"></i>
+                </div>
+                <h3 class="text-xl font-bold text-blue-dark mb-3">Marketing Digital</h3>
+                <p class="text-gray-600 mb-6">SEO, réseaux sociaux et campagnes publicitaires pour booster votre
+                    visibilité.</p>
+                <a href="/services#marketing" class="text-purple-600 font-medium hover:text-purple-800">En savoir plus
+                    →</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Key Figures -->
+<section class="py-20 bg-blue-dark text-white relative overflow-hidden">
+    <div class="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-10"></div>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+            <div data-aos="zoom-in" data-aos-delay="0">
+                <div class="text-4xl lg:text-5xl font-bold text-orange-primary mb-2">50+</div>
+                <div class="text-gray-300">Projets Réalisés</div>
+            </div>
+            <div data-aos="zoom-in" data-aos-delay="100">
+                <div class="text-4xl lg:text-5xl font-bold text-orange-primary mb-2">98%</div>
+                <div class="text-gray-300">Clients Satisfaits</div>
+            </div>
+            <div data-aos="zoom-in" data-aos-delay="200">
+                <div class="text-4xl lg:text-5xl font-bold text-orange-primary mb-2">24h</div>
+                <div class="text-gray-300">Support Réactif</div>
+            </div>
+            <div data-aos="zoom-in" data-aos-delay="300">
+                <div class="text-4xl lg:text-5xl font-bold text-orange-primary mb-2">5+</div>
+                <div class="text-gray-300">Années d'Expérience</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Process Section -->
+<section class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-3xl mx-auto mb-16" data-aos="fade-up">
+            <h2 class="text-3xl lg:text-4xl font-display font-bold text-blue-dark mb-4">Comment Nous Travaillons</h2>
+            <p class="text-gray-600">Un processus transparent et structuré pour garantir le succès de votre projet.</p>
+        </div>
+
+        <div class="relative">
+            <!-- Connecting Line (Desktop) -->
+            <div class="hidden md:block absolute top-[40px] left-0 w-full h-1 bg-gray-100 z-0">
+                <div class="absolute top-0 left-0 h-full bg-orange-primary w-full opacity-20"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 relative z-10">
+                <!-- Step 1 -->
+                <div class="text-center bg-white md:bg-transparent p-4 rounded-xl" data-aos="fade-up"
+                    data-aos-delay="0">
+                    <div
+                        class="w-20 h-20 mx-auto bg-white border-4 border-orange-primary text-orange-primary rounded-full flex items-center justify-center text-2xl font-bold mb-6 shadow-sm">
+                        1
+                    </div>
+                    <h3 class="text-lg font-bold text-blue-dark mb-2">Consultation</h3>
+                    <p class="text-sm text-gray-600">Analyse gratuite de vos besoins et objectifs.</p>
+                </div>
+                <!-- Step 2 -->
+                <div class="text-center bg-white md:bg-transparent p-4 rounded-xl" data-aos="fade-up"
+                    data-aos-delay="100">
+                    <div
+                        class="w-20 h-20 mx-auto bg-white border-4 border-orange-primary text-orange-primary rounded-full flex items-center justify-center text-2xl font-bold mb-6 shadow-sm">
+                        2
+                    </div>
+                    <h3 class="text-lg font-bold text-blue-dark mb-2">Proposition</h3>
+                    <p class="text-sm text-gray-600">Devis détaillé et planning sur mesure.</p>
+                </div>
+                <!-- Step 3 -->
+                <div class="text-center bg-white md:bg-transparent p-4 rounded-xl" data-aos="fade-up"
+                    data-aos-delay="200">
+                    <div
+                        class="w-20 h-20 mx-auto bg-white border-4 border-orange-primary text-orange-primary rounded-full flex items-center justify-center text-2xl font-bold mb-6 shadow-sm">
+                        3
+                    </div>
+                    <h3 class="text-lg font-bold text-blue-dark mb-2">Développement</h3>
+                    <p class="text-sm text-gray-600">Création interactive avec vos retours.</p>
+                </div>
+                <!-- Step 4 -->
+                <div class="text-center bg-white md:bg-transparent p-4 rounded-xl" data-aos="fade-up"
+                    data-aos-delay="300">
+                    <div
+                        class="w-20 h-20 mx-auto bg-blue-dark border-4 border-blue-dark text-white rounded-full flex items-center justify-center text-2xl font-bold mb-6 shadow-lg">
+                        <i class="fas fa-flag-checkered"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-blue-dark mb-2">Lancement</h3>
+                    <p class="text-sm text-gray-600">Mise en ligne, formation et support.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CTA Final -->
+<section class="py-20 bg-gray-900 relative overflow-hidden">
+    <div class="absolute inset-0">
+        <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80"
+            alt="Office" class="w-full h-full object-cover opacity-20">
+        <div class="absolute inset-0 bg-gradient-to-r from-blue-dark to-transparent"></div>
+    </div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div class="max-w-2xl" data-aos="fade-right">
+            <h2 class="text-3xl lg:text-4xl font-display font-bold text-white mb-6">Prêt à Digitaliser Votre Business ?
+            </h2>
+            <p class="text-xl text-gray-300 mb-8">Rejoignez les entreprises sénégalaises qui font confiance à Nexatech
+                pour leur croissance.</p>
+
+            <div
+                class="bg-orange-primary/10 border border-orange-primary/30 rounded-lg p-4 mb-8 inline-block backdrop-blur-sm">
+                <span class="text-orange-primary font-bold">🎁 Offre de lancement :</span>
+                <span class="text-white ml-2">-30% pour les 10 premiers clients du mois !</span>
+            </div>
+
+            <div class="flex flex-col sm:flex-row gap-4">
+                <a href="/contact"
+                    class="inline-flex justify-center items-center bg-orange-primary hover:bg-orange-dark text-white px-8 py-3.5 rounded-lg font-medium transition-colors shadow-lg shadow-orange-primary/30 text-lg">
+                    Démarrer mon projet
+                    <i class="fas fa-arrow-right ml-2"></i>
+                </a>
+                <a href="https://wa.me/221776767255" target="_blank"
+                    class="inline-flex justify-center items-center bg-green-600 hover:bg-green-700 text-white px-8 py-3.5 rounded-lg font-medium transition-colors text-lg">
+                    <i class="fab fa-whatsapp mr-2"></i>
+                    WhatsApp
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

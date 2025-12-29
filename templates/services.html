@@ -1,0 +1,190 @@
+{% extends "base.html" %}
+
+{% block title %}Nos Services - Nexatech Sénégal{% endblock %}
+
+{% block content %}
+<!-- Header Page -->
+<section class="bg-blue-dark py-20 relative overflow-hidden">
+    <div class="absolute inset-0 opacity-10 bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')]">
+    </div>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+        <h1 class="text-4xl lg:text-5xl font-display font-bold text-white mb-4">Nos Services</h1>
+        <p class="text-xl text-gray-300 max-w-2xl mx-auto">Des solutions technologiques sur mesure pour répondre à tous
+            vos besoins digitaux.</p>
+    </div>
+</section>
+
+<!-- Services List -->
+<div class="bg-gray-50 py-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-24">
+
+        <!-- Service 1: Web -->
+        <div id="web" class="flex flex-col lg:flex-row gap-12 items-center" data-aos="fade-up">
+            <div class="lg:w-1/2 order-2 lg:order-1">
+                <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 relative overflow-hidden">
+                    <div class="absolute top-0 right-0 w-32 h-32 bg-orange-50 rounded-bl-full -mr-8 -mt-8 z-0"></div>
+                    <div class="relative z-10">
+                        <div
+                            class="w-16 h-16 bg-orange-100 text-orange-primary rounded-xl flex items-center justify-center mb-6 text-2xl">
+                            <i class="fas fa-desktop"></i>
+                        </div>
+                        <h2 class="text-3xl font-display font-bold text-blue-dark mb-4">Création de Sites Web</h2>
+                        <p class="text-gray-600 mb-6 leading-relaxed">
+                            De la simple vitrine au portail complexe, nous concevons des sites web performants,
+                            esthétiques et optimisés pour le référencement (SEO).
+                        </p>
+                        <ul class="space-y-3 mb-8">
+                            <li class="flex items-center text-gray-700">
+                                <i class="fas fa-check text-green-500 mr-3"></i> Site Vitrine & Institutionnel
+                            </li>
+                            <li class="flex items-center text-gray-700">
+                                <i class="fas fa-check text-green-500 mr-3"></i> Site E-commerce (Boutique en ligne)
+                            </li>
+                            <li class="flex items-center text-gray-700">
+                                <i class="fas fa-check text-green-500 mr-3"></i> Applications Web sur mesure
+                            </li>
+                            <li class="flex items-center text-gray-700">
+                                <i class="fas fa-check text-green-500 mr-3"></i> Optimisation SEO incluse
+                            </li>
+                        </ul>
+                        <div class="flex items-center justify-between border-t border-gray-100 pt-6">
+                            <div>
+                                <span class="block text-xs text-gray-500 uppercase font-bold">À partir de</span>
+                                <span class="text-2xl font-bold text-blue-dark">200.000 FCFA</span>
+                            </div>
+                            <a href="/contact?service=web"
+                                class="bg-blue-dark hover:bg-blue-medium text-white px-6 py-2 rounded-lg transition-colors">Commander</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="lg:w-1/2 order-1 lg:order-2">
+                <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
+                    alt="Développement Web" class="rounded-2xl shadow-xl w-full object-cover h-[400px]">
+            </div>
+        </div>
+
+        <!-- Service 2: Mobile -->
+        <div id="mobile" class="flex flex-col lg:flex-row gap-12 items-center" data-aos="fade-up">
+            <div class="lg:w-1/2">
+                <img src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
+                    alt="Applications Mobile" class="rounded-2xl shadow-xl w-full object-cover h-[400px]">
+            </div>
+            <div class="lg:w-1/2">
+                <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 relative overflow-hidden">
+                    <div class="relative z-10">
+                        <div
+                            class="w-16 h-16 bg-blue-100 text-blue-600 rounded-xl flex items-center justify-center mb-6 text-2xl">
+                            <i class="fas fa-mobile-alt"></i>
+                        </div>
+                        <h2 class="text-3xl font-display font-bold text-blue-dark mb-4">Applications Mobiles</h2>
+                        <p class="text-gray-600 mb-6 leading-relaxed">
+                            Nous développons des applications mobiles natives et hybrides pour iOS et Android, offrant
+                            une expérience utilisateur fluide et engageante.
+                        </p>
+                        <ul class="space-y-3 mb-8">
+                            <li class="flex items-center text-gray-700">
+                                <i class="fas fa-check text-green-500 mr-3"></i> iOS & Android (Cross-platform)
+                            </li>
+                            <li class="flex items-center text-gray-700">
+                                <i class="fas fa-check text-green-500 mr-3"></i> Design UI/UX intuitif
+                            </li>
+                            <li class="flex items-center text-gray-700">
+                                <i class="fas fa-check text-green-500 mr-3"></i> Notifications Push
+                            </li>
+                            <li class="flex items-center text-gray-700">
+                                <i class="fas fa-check text-green-500 mr-3"></i> Publication sur les Stores
+                            </li>
+                        </ul>
+                        <div class="flex items-center justify-between border-t border-gray-100 pt-6">
+                            <div>
+                                <span class="block text-xs text-gray-500 uppercase font-bold">Sur devis</span>
+                            </div>
+                            <a href="/contact?service=mobile"
+                                class="bg-blue-dark hover:bg-blue-medium text-white px-6 py-2 rounded-lg transition-colors">Contacter</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Service 3: Marketing -->
+        <div id="marketing" class="flex flex-col lg:flex-row gap-12 items-center" data-aos="fade-up">
+            <div class="lg:w-1/2 order-2 lg:order-1">
+                <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 relative overflow-hidden">
+                    <div class="relative z-10">
+                        <div
+                            class="w-16 h-16 bg-purple-100 text-purple-600 rounded-xl flex items-center justify-center mb-6 text-2xl">
+                            <i class="fas fa-bullhorn"></i>
+                        </div>
+                        <h2 class="text-3xl font-display font-bold text-blue-dark mb-4">Marketing Digital</h2>
+                        <p class="text-gray-600 mb-6 leading-relaxed">
+                            Boostez votre visibilité et attirez plus de clients grâce à nos stratégies de marketing
+                            digital ciblées et performantes.
+                        </p>
+                        <ul class="space-y-3 mb-8">
+                            <li class="flex items-center text-gray-700">
+                                <i class="fas fa-check text-green-500 mr-3"></i> Gestion des Réseaux Sociaux (CM)
+                            </li>
+                            <li class="flex items-center text-gray-700">
+                                <i class="fas fa-check text-green-500 mr-3"></i> Publicité Facebook & Instagram Ads
+                            </li>
+                            <li class="flex items-center text-gray-700">
+                                <i class="fas fa-check text-green-500 mr-3"></i> Référencement Google (SEO/SEA)
+                            </li>
+                            <li class="flex items-center text-gray-700">
+                                <i class="fas fa-check text-green-500 mr-3"></i> Création de contenu visuel
+                            </li>
+                        </ul>
+                        <div class="flex items-center justify-between border-t border-gray-100 pt-6">
+                            <div>
+                                <span class="block text-xs text-gray-500 uppercase font-bold">Packs mensuels</span>
+                            </div>
+                            <a href="/contact?service=marketing"
+                                class="bg-blue-dark hover:bg-blue-medium text-white px-6 py-2 rounded-lg transition-colors">Voir
+                                les packs</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="lg:w-1/2 order-1 lg:order-2">
+                <img src="https://images.unsplash.com/photo-1557838923-2985c318be48?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
+                    alt="Marketing Digital" class="rounded-2xl shadow-xl w-full object-cover h-[400px]">
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<!-- Guarantees -->
+<section class="py-16 bg-white border-t border-gray-100">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8 text-center">
+            <div data-aos="fade-up" data-aos-delay="0">
+                <i class="fas fa-lock text-3xl text-gray-300 mb-3"></i>
+                <p class="font-bold text-gray-700 text-sm">Transparence</p>
+            </div>
+            <div data-aos="fade-up" data-aos-delay="100">
+                <i class="fas fa-clock text-3xl text-gray-300 mb-3"></i>
+                <p class="font-bold text-gray-700 text-sm">Respect des Délais</p>
+            </div>
+            <div data-aos="fade-up" data-aos-delay="200">
+                <i class="fas fa-copyright text-3xl text-gray-300 mb-3"></i>
+                <p class="font-bold text-gray-700 text-sm">100% Propriétaire</p>
+            </div>
+            <div data-aos="fade-up" data-aos-delay="300">
+                <i class="fas fa-chalkboard-teacher text-3xl text-gray-300 mb-3"></i>
+                <p class="font-bold text-gray-700 text-sm">Formation Incluse</p>
+            </div>
+            <div data-aos="fade-up" data-aos-delay="400">
+                <i class="fas fa-headset text-3xl text-gray-300 mb-3"></i>
+                <p class="font-bold text-gray-700 text-sm">Support Dédié</p>
+            </div>
+            <div data-aos="fade-up" data-aos-delay="500">
+                <i class="fas fa-credit-card text-3xl text-gray-300 mb-3"></i>
+                <p class="font-bold text-gray-700 text-sm">Paiement Flexible</p>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

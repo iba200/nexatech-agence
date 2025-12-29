@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="fr" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Nexatech Sénégal{% endblock %}</title>
+    <link href="{{ url_for('static', filename='css/output.css') }}" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+<body class="font-sans antialiased text-gray-900 bg-gray-50 flex flex-col min-h-screen">
+
+    <!-- Header -->
+    <header class="bg-white shadow-sm fixed w-full z-50 transition-all duration-300" x-data="{ mobileMenuOpen: false, scrolled: false }" @scroll.window="scrolled = (window.pageYOffset > 20)">
+        <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <!-- Logo -->
+            <a href="/" class="flex-shrink-0 flex items-center gap-2">
+                <span class="text-2xl font-display font-bold text-blue-dark">Nexa<span class="text-orange-primary">tech</span></span>
+            </a>
+
+            <!-- Desktop Menu -->
+            <div class="hidden md:flex items-center space-x-8">
+                <a href="/" class="text-gray-900 hover:text-orange-primary font-medium transition-colors">Accueil</a>
+                <div class="relative group">
+                    <button class="text-gray-900 group-hover:text-orange-primary font-medium transition-colors flex items-center">
+                        Services
+                        <i class="fas fa-chevron-down ml-1 text-xs transition-transform group-hover:rotate-180"></i>
+                    </button>
+                    <!-- Dropdown -->
+                    <div class="absolute left-0 mt-2 w-56 bg-white rounded-lg shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 transform translate-y-2 group-hover:translate-y-0 z-50">
+                        <div class="py-2">
+                            <a href="/services#web" class="block px-4 py-2 text-sm text-gray-700 hover:bg-orange-50 hover:text-orange-primary">Développement Web</a>
+                            <a href="/services#mobile" class="block px-4 py-2 text-sm text-gray-700 hover:bg-orange-50 hover:text-orange-primary">Applications Mobile</a>
+                            <a href="/services#marketing" class="block px-4 py-2 text-sm text-gray-700 hover:bg-orange-50 hover:text-orange-primary">Marketing Digital</a>
+                        </div>
+                    </div>
+                </div>
+                <a href="/immogest" class="text-gray-900 hover:text-orange-primary font-medium transition-colors">ImmoGest</a>
+                <a href="/portfolio" class="text-gray-900 hover:text-orange-primary font-medium transition-colors">Portfolio</a>
+                <a href="/a-propos" class="text-gray-900 hover:text-orange-primary font-medium transition-colors">À Propos</a>
+                <a href="/contact" class="text-gray-900 hover:text-orange-primary font-medium transition-colors">Contact</a>
+            </div>
+
+            <!-- CTA Button -->
+            <div class="hidden md:block">
+                <a href="/contact" class="bg-orange-primary hover:bg-orange-dark text-white px-6 py-2.5 rounded-lg font-medium transition-colors shadow-lg shadow-orange-primary/30">
+                    Demander un Devis
+                </a>
+            </div>
+
+            <!-- Mobile menu button -->
+            <div class="md:hidden flex items-center">
+                <button @click="mobileMenuOpen = !mobileMenuOpen" class="text-gray-900 hover:text-orange-primary focus:outline-none">
+                    <i class="fas fa-bars text-2xl" x-show="!mobileMenuOpen"></i>
+                    <i class="fas fa-times text-2xl" x-show="mobileMenuOpen" x-cloak></i>
+                </button>
+            </div>
+        </nav>
+
+        <!-- Mobile Menu -->
+        <div class="md:hidden bg-white border-t border-gray-100" x-show="mobileMenuOpen" x-transition x-cloak>
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="/" class="block px-3 py-2 rounded-md text-base font-medium text-gray-900 hover:bg-orange-50 hover:text-orange-primary">Accueil</a>
+                <a href="/services" class="block px-3 py-2 rounded-md text-base font-medium text-gray-900 hover:bg-orange-50 hover:text-orange-primary">Services</a>
+                <a href="/immogest" class="block px-3 py-2 rounded-md text-base font-medium text-gray-900 hover:bg-orange-50 hover:text-orange-primary">ImmoGest</a>
+                <a href="/portfolio" class="block px-3 py-2 rounded-md text-base font-medium text-gray-900 hover:bg-orange-50 hover:text-orange-primary">Portfolio</a>
+                <a href="/a-propos" class="block px-3 py-2 rounded-md text-base font-medium text-gray-900 hover:bg-orange-50 hover:text-orange-primary">À Propos</a>
+                <a href="/contact" class="block px-3 py-2 rounded-md text-base font-medium text-gray-900 hover:bg-orange-50 hover:text-orange-primary">Contact</a>
+                <div class="mt-4 px-3">
+                    <a href="/contact" class="block text-center w-full bg-orange-primary hover:bg-orange-dark text-white px-6 py-3 rounded-lg font-medium transition-colors shadow-lg shadow-orange-primary/30">
+                        Demander un Devis
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Content -->
+    <main class="flex-grow pt-20">
+        {% block content %}{% endblock %}
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-blue-dark text-white pt-16 pb-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+                <!-- Branding -->
+                <div>
+                    <a href="/" class="inline-block mb-6">
+                        <span class="text-3xl font-display font-bold text-white">Nexa<span class="text-orange-primary">tech</span></span>
+                    </a>
+                    <p class="text-gray-300 mb-6 leading-relaxed">
+                        Partenaire de confiance pour la transformation digitale des entreprises au Sénégal. Solutions web, mobile et logicielles sur mesure.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="w-10 h-10 rounded-full bg-blue-medium flex items-center justify-center hover:bg-orange-primary transition-colors">
+                            <i class="fab fa-facebook-f text-white"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-blue-medium flex items-center justify-center hover:bg-orange-primary transition-colors">
+                            <i class="fab fa-linkedin-in text-white"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-blue-medium flex items-center justify-center hover:bg-orange-primary transition-colors">
+                            <i class="fab fa-twitter text-white"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-blue-medium flex items-center justify-center hover:bg-orange-primary transition-colors">
+                            <i class="fab fa-instagram text-white"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Services -->
+                <div>
+                    <h3 class="text-lg font-bold mb-6 font-display">Services</h3>
+                    <ul class="space-y-3">
+                        <li><a href="/services" class="text-gray-300 hover:text-orange-primary transition-colors">Développement Web</a></li>
+                        <li><a href="/services" class="text-gray-300 hover:text-orange-primary transition-colors">Applications Mobiles</a></li>
+                        <li><a href="/services" class="text-gray-300 hover:text-orange-primary transition-colors">E-Commerce</a></li>
+                        <li><a href="/immogest" class="text-gray-300 hover:text-orange-primary transition-colors">Logiciel ImmoGest</a></li>
+                        <li><a href="/services" class="text-gray-300 hover:text-orange-primary transition-colors">Maintenance</a></li>
+                    </ul>
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h3 class="text-lg font-bold mb-6 font-display">Liens Rapides</h3>
+                    <ul class="space-y-3">
+                        <li><a href="/portfolio" class="text-gray-300 hover:text-orange-primary transition-colors">Notre Portfolio</a></li>
+                        <li><a href="/a-propos" class="text-gray-300 hover:text-orange-primary transition-colors">À Propos de Nous</a></li>
+                        <li><a href="/contact" class="text-gray-300 hover:text-orange-primary transition-colors">Demander un Devis</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-orange-primary transition-colors">Mentions Légales</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-orange-primary transition-colors">Politique de Confidentialité</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact -->
+                <div>
+                    <h3 class="text-lg font-bold mb-6 font-display">Contact</h3>
+                    <ul class="space-y-4">
+                        <li class="flex items-start">
+                            <i class="fas fa-map-marker-alt mt-1.5 mr-3 text-orange-primary"></i>
+                            <span class="text-gray-300">Dakar, Sénégal</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-phone-alt mr-3 text-orange-primary"></i>
+                            <a href="tel:+221776767255" class="text-gray-300 hover:text-orange-primary transition-colors">+221 77 676 72 55</a>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-envelope mr-3 text-orange-primary"></i>
+                            <a href="mailto:contact@nexatech-sn.online" class="text-gray-300 hover:text-orange-primary transition-colors">contact@nexatech-sn.online</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="border-t border-gray-700 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-400 text-sm mb-4 md:mb-0">
+                    &copy; 2024 Nexatech Sénégal. Tous droits réservés.
+                </p>
+                <div class="flex space-x-6 text-sm text-gray-400">
+                    <a href="#" class="hover:text-white transition-colors">Confidentialité</a>
+                    <a href="#" class="hover:text-white transition-colors">Conditions d'utilisation</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        AOS.init({
+            duration: 800,
+            offset: 100,
+            once: true
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,168 @@
+{% extends "base.html" %}
+
+{% block title %}Contactez-nous - Nexatech Sénégal{% endblock %}
+
+{% block content %}
+<!-- Header Page -->
+<section class="bg-blue-dark py-20 relative overflow-hidden">
+    <div class="absolute inset-0 opacity-10 bg-[url('https://www.transparenttextures.com/patterns/map-paths.png')]">
+    </div>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+        <h1 class="text-4xl lg:text-5xl font-display font-bold text-white mb-4">Contactez-nous</h1>
+        <p class="text-xl text-gray-300 max-w-2xl mx-auto">Prêt à démarrer votre projet ? Nous sommes là pour vous
+            répondre.</p>
+    </div>
+</section>
+
+<!-- Contact Section -->
+<section class="py-20 bg-gray-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex flex-col lg:flex-row gap-12 bg-white rounded-2xl shadow-xl overflow-hidden">
+
+            <!-- Info Side -->
+            <div class="lg:w-1/3 bg-blue-dark p-12 text-white flex flex-col justify-between">
+                <div>
+                    <h2 class="text-2xl font-display font-bold mb-6">Informations de Contact</h2>
+                    <p class="text-gray-300 mb-12">Remplissez le formulaire et notre équipe reviendra vers vous sous
+                        24h.</p>
+
+                    <ul class="space-y-8">
+                        <li class="flex items-start">
+                            <div
+                                class="w-10 h-10 bg-orange-primary/20 rounded-lg flex items-center justify-center text-orange-primary mr-4 flex-shrink-0">
+                                <i class="fas fa-phone-alt"></i>
+                            </div>
+                            <div>
+                                <p class="text-sm text-gray-400 font-bold mb-1">Téléphone & WhatsApp</p>
+                                <a href="tel:+221776767255"
+                                    class="text-lg font-bold hover:text-orange-primary transition-colors">+221 77 676 72
+                                    55</a>
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <div
+                                class="w-10 h-10 bg-orange-primary/20 rounded-lg flex items-center justify-center text-orange-primary mr-4 flex-shrink-0">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div>
+                                <p class="text-sm text-gray-400 font-bold mb-1">Email</p>
+                                <a href="mailto:contact@nexatech-sn.online"
+                                    class="text-lg font-bold hover:text-orange-primary transition-colors">contact@nexatech-sn.online</a>
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <div
+                                class="w-10 h-10 bg-orange-primary/20 rounded-lg flex items-center justify-center text-orange-primary mr-4 flex-shrink-0">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div>
+                                <p class="text-sm text-gray-400 font-bold mb-1">Adresse</p>
+                                <p class="text-lg font-medium">Sacré-Cœur 3,<br>Dakar, Sénégal</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="mt-12">
+                    <p class="text-sm text-gray-400 font-bold mb-4">Suivez-nous</p>
+                    <div class="flex space-x-4">
+                        <a href="#"
+                            class="w-10 h-10 rounded-full bg-blue-medium flex items-center justify-center hover:bg-orange-primary transition-colors">
+                            <i class="fab fa-facebook-f text-white"></i>
+                        </a>
+                        <a href="#"
+                            class="w-10 h-10 rounded-full bg-blue-medium flex items-center justify-center hover:bg-orange-primary transition-colors">
+                            <i class="fab fa-linkedin-in text-white"></i>
+                        </a>
+                        <a href="#"
+                            class="w-10 h-10 rounded-full bg-blue-medium flex items-center justify-center hover:bg-orange-primary transition-colors">
+                            <i class="fab fa-instagram text-white"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Form Side -->
+            <div class="lg:w-2/3 p-12">
+                <form action="https://formspree.io/f/xkonqzvd" method="POST" class="space-y-6">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div>
+                            <label class="block text-gray-700 font-medium mb-2">Nom Complet</label>
+                            <input type="text" name="name" required
+                                class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-orange-primary focus:ring-1 focus:ring-orange-primary outline-none transition-all"
+                                placeholder="Votre nom">
+                        </div>
+                        <div>
+                            <label class="block text-gray-700 font-medium mb-2">Email</label>
+                            <input type="email" name="email" required
+                                class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-orange-primary focus:ring-1 focus:ring-orange-primary outline-none transition-all"
+                                placeholder="votre@email.com">
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div>
+                            <label class="block text-gray-700 font-medium mb-2">Téléphone</label>
+                            <input type="tel" name="phone" required
+                                class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-orange-primary focus:ring-1 focus:ring-orange-primary outline-none transition-all"
+                                placeholder="+221 ...">
+                        </div>
+                        <div>
+                            <label class="block text-gray-700 font-medium mb-2">Type de Projet</label>
+                            <select name="project_type"
+                                class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-orange-primary focus:ring-1 focus:ring-orange-primary outline-none transition-all bg-white">
+                                <option value="">Choisir...</option>
+                                <option value="website">Site Web Vitrine</option>
+                                <option value="ecommerce">E-Commerce</option>
+                                <option value="mobile_app">Application Mobile</option>
+                                <option value="immogest">Logiciel ImmoGest</option>
+                                <option value="marketing">Marketing Digital</option>
+                                <option value="other">Autre</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div>
+                        <label class="block text-gray-700 font-medium mb-2">Budget Estimé</label>
+                        <select name="budget"
+                            class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-orange-primary focus:ring-1 focus:ring-orange-primary outline-none transition-all bg-white">
+                            <option value="">Choisir...</option>
+                            <option value="small">Moins de 500.000 FCFA</option>
+                            <option value="medium">500.000 - 2.000.000 FCFA</option>
+                            <option value="large">Plus de 2.000.000 FCFA</option>
+                        </select>
+                    </div>
+
+                    <div>
+                        <label class="block text-gray-700 font-medium mb-2">Votre Message</label>
+                        <textarea name="message" rows="4" required
+                            class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-orange-primary focus:ring-1 focus:ring-orange-primary outline-none transition-all"
+                            placeholder="Décrivez votre projet en quelques mots..."></textarea>
+                    </div>
+
+                    <div class="flex items-start">
+                        <input type="checkbox" required id="consent" class="mt-1 mr-3">
+                        <label for="consent" class="text-sm text-gray-600">J'accepte d'être recontacté par Nexatech. Mes
+                            données ne seront jamais partagées à des tiers.</label>
+                    </div>
+
+                    <button type="submit"
+                        class="w-full bg-orange-primary hover:bg-orange-dark text-white font-bold py-4 rounded-lg transition-colors shadow-lg shadow-orange-primary/30 text-lg">
+                        Envoyer ma Demande
+                    </button>
+                    <p class="text-center text-xs text-gray-400 mt-2">
+                        * En soumettant ce formulaire, vous acceptez notre politique de confidentialité.
+                    </p>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Map Section -->
+<section class="h-96 w-full bg-gray-200">
+    <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3859.135248559287!2d-17.47548!3d14.70425!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTTCsDQyJzE1LjMiTiAxN8KwMjgnMzEuNyJX!5e0!3m2!1sfr!2ssn!4v1620000000000!5m2!1sfr!2ssn"
+        width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+</section>
+{% endblock %}

@@ -1,0 +1,22 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+venv/
+env/
+.env
+instance/
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Node.js
+node_modules/
+npm-debug.log
+
+# Tailwind / Assets
+# static/css/output.css # Uncomment if you want to ignore built CSS, but strictly speaking for a simple deploy it might be useful to keep if no build step on server
+
+# System
+.DS_Store
+Thumbs.db
