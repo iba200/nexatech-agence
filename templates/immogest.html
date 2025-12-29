@@ -240,6 +240,99 @@
     </div>
 </section>
 
+</section>
+
+<!-- FAQ Section -->
+<section class="py-20 bg-gray-50">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16" data-aos="fade-up">
+            <h2 class="text-3xl lg:text-4xl font-display font-bold text-blue-dark mb-4">Questions Fréquentes</h2>
+        </div>
+
+        <div class="space-y-4" x-data="{ active: null }">
+            <!-- FAQ 1 -->
+            <div class="bg-white rounded-xl shadow-sm overflow-hidden" data-aos="fade-up" data-aos-delay="0">
+                <button @click="active = active === 1 ? null : 1"
+                    class="w-full px-6 py-4 text-left flex justify-between items-center focus:outline-none">
+                    <span class="font-bold text-blue-dark">ImmoGest fonctionne-t-il hors ligne ?</span>
+                    <i class="fas fa-chevron-down text-orange-primary transition-transform duration-300"
+                        :class="{ 'rotate-180': active === 1 }"></i>
+                </button>
+                <div x-show="active === 1" x-collapse style="display: none;">
+                    <div class="px-6 pb-4 text-gray-600 border-t border-gray-100 pt-4">
+                        Non, vous avez besoin d'une connexion internet. Mais l'application est très légère et fonctionne
+                        même avec une connexion 3G lente.
+                    </div>
+                </div>
+            </div>
+
+            <!-- FAQ 2 -->
+            <div class="bg-white rounded-xl shadow-sm overflow-hidden" data-aos="fade-up" data-aos-delay="100">
+                <button @click="active = active === 2 ? null : 2"
+                    class="w-full px-6 py-4 text-left flex justify-between items-center focus:outline-none">
+                    <span class="font-bold text-blue-dark">Mes données sont-elles sécurisées ?</span>
+                    <i class="fas fa-chevron-down text-orange-primary transition-transform duration-300"
+                        :class="{ 'rotate-180': active === 2 }"></i>
+                </button>
+                <div x-show="active === 2" x-collapse style="display: none;">
+                    <div class="px-6 pb-4 text-gray-600 border-t border-gray-100 pt-4">
+                        Absolument. Hébergement sécurisé, sauvegardes quotidiennes, cryptage des données sensibles. Vos
+                        données vous appartiennent.
+                    </div>
+                </div>
+            </div>
+
+            <!-- FAQ 3 -->
+            <div class="bg-white rounded-xl shadow-sm overflow-hidden" data-aos="fade-up" data-aos-delay="200">
+                <button @click="active = active === 3 ? null : 3"
+                    class="w-full px-6 py-4 text-left flex justify-between items-center focus:outline-none">
+                    <span class="font-bold text-blue-dark">Puis-je importer mes données existantes ?</span>
+                    <i class="fas fa-chevron-down text-orange-primary transition-transform duration-300"
+                        :class="{ 'rotate-180': active === 3 }"></i>
+                </button>
+                <div x-show="active === 3" x-collapse style="display: none;">
+                    <div class="px-6 pb-4 text-gray-600 border-t border-gray-100 pt-4">
+                        Oui ! Si vous avez un fichier Excel, nous pouvons l'importer gratuitement. Sinon, la saisie
+                        manuelle est très facile et rapide.
+                    </div>
+                </div>
+            </div>
+
+            <!-- FAQ 4 -->
+            <div class="bg-white rounded-xl shadow-sm overflow-hidden" data-aos="fade-up" data-aos-delay="300">
+                <button @click="active = active === 4 ? null : 4"
+                    class="w-full px-6 py-4 text-left flex justify-between items-center focus:outline-none">
+                    <span class="font-bold text-blue-dark">Quels modes de paiement acceptez-vous ?</span>
+                    <i class="fas fa-chevron-down text-orange-primary transition-transform duration-300"
+                        :class="{ 'rotate-180': active === 4 }"></i>
+                </button>
+                <div x-show="active === 4" x-collapse style="display: none;">
+                    <div class="px-6 pb-4 text-gray-600 border-t border-gray-100 pt-4">
+                        Nous acceptons Wave, Orange Money, Free Money et les virements bancaires. Vous bénéficiez de 10%
+                        de réduction pour un paiement annuel.
+                    </div>
+                </div>
+            </div>
+
+            <!-- FAQ 5 -->
+            <div class="bg-white rounded-xl shadow-sm overflow-hidden" data-aos="fade-up" data-aos-delay="400">
+                <button @click="active = active === 5 ? null : 5"
+                    class="w-full px-6 py-4 text-left flex justify-between items-center focus:outline-none">
+                    <span class="font-bold text-blue-dark">Support en wolof disponible ?</span>
+                    <i class="fas fa-chevron-down text-orange-primary transition-transform duration-300"
+                        :class="{ 'rotate-180': active === 5 }"></i>
+                </button>
+                <div x-show="active === 5" x-collapse style="display: none;">
+                    <div class="px-6 pb-4 text-gray-600 border-t border-gray-100 pt-4">
+                        L'interface est en français, mais notre support parle wolof ! Nous offrons une assistance
+                        téléphonique dans les deux langues.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
 <!-- Waitlist -->
 <section id="waitlist" class="py-20 bg-blue-dark text-white relative overflow-hidden">
     <!-- Decor -->

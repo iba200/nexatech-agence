@@ -175,11 +175,57 @@
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
             <div data-aos="zoom-in" data-aos-delay="0">
-                <div class="text-4xl lg:text-5xl font-bold text-orange-primary mb-2">50+</div>
+                <div class="text-4xl lg:text-5xl font-bold text-orange-primary mb-2" x-data="{ current: 0, target: 50 }"
+                    x-init="
+                    $nextTick(() => {
+                        const observer = new IntersectionObserver((entries) => {
+                            if (entries[0].isIntersecting) {
+                                let start = 0;
+                                const duration = 2000;
+                                const step = timestamp => {
+                                    if (!start) start = timestamp;
+                                    const progress = Math.min((timestamp - start) / duration, 1);
+                                    current = Math.floor(progress * (target - 0) + 0);
+                                    if (progress < 1) {
+                                        window.requestAnimationFrame(step);
+                                    }
+                                };
+                                window.requestAnimationFrame(step);
+                                observer.disconnect();
+                            }
+                        });
+                        observer.observe($el);
+                    })
+                ">
+                    <span x-text="current">0</span>+
+                </div>
                 <div class="text-gray-300">Projets Réalisés</div>
             </div>
             <div data-aos="zoom-in" data-aos-delay="100">
-                <div class="text-4xl lg:text-5xl font-bold text-orange-primary mb-2">98%</div>
+                <div class="text-4xl lg:text-5xl font-bold text-orange-primary mb-2" x-data="{ current: 0, target: 98 }"
+                    x-init="
+                    $nextTick(() => {
+                        const observer = new IntersectionObserver((entries) => {
+                            if (entries[0].isIntersecting) {
+                                let start = 0;
+                                const duration = 2000;
+                                const step = timestamp => {
+                                    if (!start) start = timestamp;
+                                    const progress = Math.min((timestamp - start) / duration, 1);
+                                    current = Math.floor(progress * (target - 0) + 0);
+                                    if (progress < 1) {
+                                        window.requestAnimationFrame(step);
+                                    }
+                                };
+                                window.requestAnimationFrame(step);
+                                observer.disconnect();
+                            }
+                        });
+                        observer.observe($el);
+                    })
+                ">
+                    <span x-text="current">0</span>%
+                </div>
                 <div class="text-gray-300">Clients Satisfaits</div>
             </div>
             <div data-aos="zoom-in" data-aos-delay="200">
@@ -187,7 +233,30 @@
                 <div class="text-gray-300">Support Réactif</div>
             </div>
             <div data-aos="zoom-in" data-aos-delay="300">
-                <div class="text-4xl lg:text-5xl font-bold text-orange-primary mb-2">5+</div>
+                <div class="text-4xl lg:text-5xl font-bold text-orange-primary mb-2" x-data="{ current: 0, target: 5 }"
+                    x-init="
+                     $nextTick(() => {
+                        const observer = new IntersectionObserver((entries) => {
+                            if (entries[0].isIntersecting) {
+                                let start = 0;
+                                const duration = 2000;
+                                const step = timestamp => {
+                                    if (!start) start = timestamp;
+                                    const progress = Math.min((timestamp - start) / duration, 1);
+                                    current = Math.floor(progress * (target - 0) + 0);
+                                    if (progress < 1) {
+                                        window.requestAnimationFrame(step);
+                                    }
+                                };
+                                window.requestAnimationFrame(step);
+                                observer.disconnect();
+                            }
+                        });
+                        observer.observe($el);
+                    })
+                ">
+                    <span x-text="current">0</span>+
+                </div>
                 <div class="text-gray-300">Années d'Expérience</div>
             </div>
         </div>
@@ -248,6 +317,79 @@
                     </div>
                     <h3 class="text-lg font-bold text-blue-dark mb-2">Lancement</h3>
                     <p class="text-sm text-gray-600">Mise en ligne, formation et support.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+</section>
+
+<!-- Testimonials Section -->
+<section class="py-20 bg-gray-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16" data-aos="fade-up">
+            <h2 class="text-3xl lg:text-4xl font-display font-bold text-blue-dark mb-4">Ils Nous Font Confiance</h2>
+            <p class="text-gray-600">Découvrez ce que nos clients disent de nous.</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <!-- Testimonial 1 -->
+            <div class="bg-white p-8 rounded-xl shadow-sm hover:shadow-md transition-shadow" data-aos="fade-up"
+                data-aos-delay="0">
+                <div class="flex items-center mb-6">
+                    <div
+                        class="w-12 h-12 rounded-full bg-orange-100 flex items-center justify-center text-orange-primary font-bold text-xl mr-4">
+                        FD</div>
+                    <div>
+                        <h4 class="font-bold text-blue-dark">Fatou Diop</h4>
+                        <p class="text-xs text-gray-500">Propriétaire, Le Jardin de Dakar</p>
+                    </div>
+                </div>
+                <p class="text-gray-600 italic">"Grâce au site e-commerce de Nexatech, nos commandes en ligne ont triplé
+                    en 2 mois. L'équipe est professionnelle et à l'écoute."</p>
+                <div class="flex text-yellow-400 mt-4 text-sm">
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                        class="fas fa-star"></i><i class="fas fa-star"></i>
+                </div>
+            </div>
+
+            <!-- Testimonial 2 -->
+            <div class="bg-white p-8 rounded-xl shadow-sm hover:shadow-md transition-shadow" data-aos="fade-up"
+                data-aos-delay="100">
+                <div class="flex items-center mb-6">
+                    <div
+                        class="w-12 h-12 rounded-full bg-orange-100 flex items-center justify-center text-orange-primary font-bold text-xl mr-4">
+                        MS</div>
+                    <div>
+                        <h4 class="font-bold text-blue-dark">Mamadou Seck</h4>
+                        <p class="text-xs text-gray-500">Bailleur (12 appartements)</p>
+                    </div>
+                </div>
+                <p class="text-gray-600 italic">"Avant je passais 2 jours par mois sur mes loyers. Maintenant c'est
+                    automatisé avec ImmoGest et j'ai tout sous les yeux. Génial!"</p>
+                <div class="flex text-yellow-400 mt-4 text-sm">
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                        class="fas fa-star"></i><i class="fas fa-star"></i>
+                </div>
+            </div>
+
+            <!-- Testimonial 3 -->
+            <div class="bg-white p-8 rounded-xl shadow-sm hover:shadow-md transition-shadow" data-aos="fade-up"
+                data-aos-delay="200">
+                <div class="flex items-center mb-6">
+                    <div
+                        class="w-12 h-12 rounded-full bg-orange-100 flex items-center justify-center text-orange-primary font-bold text-xl mr-4">
+                        AN</div>
+                    <div>
+                        <h4 class="font-bold text-blue-dark">Aminata Ndiaye</h4>
+                        <p class="text-xs text-gray-500">Directrice, EcoMode Sénégal</p>
+                    </div>
+                </div>
+                <p class="text-gray-600 italic">"Nous avons confié notre site web et nos réseaux sociaux à Nexatech. Le
+                    résultat dépasse nos attentes."</p>
+                <div class="flex text-yellow-400 mt-4 text-sm">
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                        class="fas fa-star"></i><i class="fas fa-star"></i>
                 </div>
             </div>
         </div>
